@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/1.Api/">
+    <Project Path="Fiap.FCGames.Payments.Api/Fiap.FCGames.Payments.Api.csproj" />
+    <Project Path="Fiap.FCGames.Payments.Application/Fiap.FCGames.Payments.Application.csproj" />
+    <Project Path="Fiap.FCGames.Payments.CrossCutting/Fiap.FCGames.Payments.CrossCutting.csproj" />
+    <Project Path="Fiap.FCGames.Payments.Domain/Fiap.FCGames.Payments.Domain.csproj" />
+    <Project Path="Fiap.FCGames.Payments.Infra/Fiap.FCGames.Payments.Infra.csproj" />
+  </Folder>
+</Solution>
