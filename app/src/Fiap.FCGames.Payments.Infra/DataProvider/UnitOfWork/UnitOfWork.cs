@@ -6,17 +6,12 @@ namespace Fiap.FCGames.Payments.Infra.DataProvider.UnitOfWork;
 public class UnitOfWork : IUnitOfWork
 {
     private readonly FcGamesContexto _context;
-    public IUsuarioRepository UsuarioRepository { get; }
-    public IBibliotecaJogosRepository BibliotecaJogosRepository { get; }
+    public IPagamentoRepository PagamentoRepository { get; }
 
-    public UnitOfWork(
-        FcGamesContexto context,
-        IUsuarioRepository usuarioRepository,
-        IBibliotecaJogosRepository bibliotecaJogosRepository)
+    public UnitOfWork(FcGamesContexto context, IPagamentoRepository pagamentoRepository)
     {
         _context = context;
-        UsuarioRepository = usuarioRepository;
-        BibliotecaJogosRepository = bibliotecaJogosRepository;
+        PagamentoRepository = pagamentoRepository;
     }
 
     public Task<int> CommitAsync(CancellationToken cancellationToken = default)
