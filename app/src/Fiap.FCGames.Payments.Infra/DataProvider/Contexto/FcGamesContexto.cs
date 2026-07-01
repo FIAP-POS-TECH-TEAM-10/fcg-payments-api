@@ -1,5 +1,6 @@
 using Fiap.FCGames.Payments.Domain.Aggregates.AggregatePagamento;
 using Fiap.FCGames.Payments.Infra.DataProvider.EntityConfigurations;
+using MassTransit;
 using Microsoft.EntityFrameworkCore;
 
 namespace Fiap.FCGames.Payments.Infra.DataProvider.Contexto;
@@ -13,5 +14,9 @@ public class FcGamesContexto : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfiguration(new PagamentoConfiguration());
+
+        modelBuilder.AddInboxStateEntity();
+        modelBuilder.AddOutboxMessageEntity();
+        modelBuilder.AddOutboxStateEntity();
     }
 }
